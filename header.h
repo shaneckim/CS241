@@ -29,15 +29,21 @@ void reshuffle( Card * const wDeck, int n );
 void printDeckRaw(Card * const wDeck);
 void printDeck(Card * const wDeck, const char * wFace[],
     const char * wSuit[], const char * wColor[] );
+void printDeckFancy(Card * const wDeck, const char * wFace[],
+    const char * wSuit[] );
 void printHand( Card ** wDeck, const char * wFace[],
     const char * wSuit[], const char * wColor[] );
 void printHandRaw( Card ** wDeck);
-void printHandFancy( Hand * wHand, const char * wFace[], const char * wSuit[]);
+void printHandFancy( Hand * wHand, const char * wFace[], const char * wSuit[] );
+void printHandEval( Hand * wHand, const char * wFace[], const char * wRank[] );
 void printCard( Card const wDeck );
-void printScore( Hand *wHand, const char *wFace[] );
+void printCardFancy ( Card const wDeck,	const char * wFace[],
+    const char * wSuit[] );
+void printScore( Hand *wHand, const char *wFace[], const char * wRank[] );
 
 void qSort( Card ** wHand, int left, int right, int option );
 void swap( Card ** wHand, int i, int j );
 
 void evaluateHand( Hand *wHand );
 int compareHand( Hand *wHand );
+int getLine(char *prmpt, char * buff, size_t sz);
